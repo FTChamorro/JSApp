@@ -32,7 +32,7 @@ add(caller,toAdd,objCaller,callback){
     if((callback!==undefined)&&(callback!==null))
     {
       scriptAdded.addEventListener('load',function(){
-        callback(objCaller,new login());
+        callback(objCaller,eval('new '+toAdd+'()'));
       });
     }
     //console.log(document.getElementsByClassName('modules')[whereToAdd]);
